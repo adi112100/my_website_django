@@ -1,9 +1,10 @@
-﻿asgiref==3.2.7
+asgiref==3.2.7
 astroid==2.4.2
 click==7.1.2
 colorama==0.4.3
-Django==3.0.7
-django_heroku
+dj-database-url==0.5.0
+Django==3.0.5
+django-heroku==0.3.1
 gunicorn==20.0.4
 isort==4.3.21
 itsdangerous==1.1.0
@@ -11,6 +12,7 @@ Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
+psycopg2==2.8.5
 pylint==2.5.3
 python-dateutil==2.8.1
 pytz==2019.3
