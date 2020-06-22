@@ -1,2 +1,2 @@
-web gunicorn portfolio.wsgi --log-file -
+web gunicorn aditya.wsgi --log-file -
 
