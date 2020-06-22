@@ -68,14 +68,14 @@
 
     }
 
-    .asside:hover{
+    .asside:hover {
       padding-left: 3vw;
     }
 
     .fab {
       color: white;
       margin: 20px 5px;
-      
+
 
     }
 
@@ -89,7 +89,7 @@
     @media only screen and (min-width: 1000px) {
       .asside {
         font-size: 30px;
-        
+
       }
 
     }
@@ -204,12 +204,11 @@
       z-index: 2;
       display: flex;
       justify-content: space-evenly;
-      
+
       font-size: 5vw;
     }
 
-    .lang .fab
-    {
+    .lang .fab {
       color: #202020;
     }
 
@@ -281,14 +280,14 @@
 
       }
 
-      .honors h1{
+      .honors h1 {
 
         text-align: center;
         color: white;
         font-size: 4vw;
       }
 
-      .mainn3{
+      .mainn3 {
         height: 2000px;
       }
 
@@ -309,10 +308,10 @@
 
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-evenly;
     }
 
-    #fo1{
+    #fo1 {
       background-color: black;
     }
 
@@ -376,11 +375,11 @@
   <!-- this is aside ............... -->
 
   <aside class="asside">
-    <a href="#"><i class="fab fa-instagram"></i></a></i>
-    <a href="https://www.facebook.com/aditya.morankar.1"><i class="fab fa-facebook-f"></i></a></i>
-    <a href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in"><i
+    <a href="https://www.instagram.com/7315adi" target="_blank"><i class="fab fa-instagram"></i></a></i>
+    <a href="https://www.facebook.com/aditya.morankar.1" target="_blank"><i class="fab fa-facebook-f"></i></a></i>
+    <a href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank"><i
         class="fab fa-linkedin-in"></i></a></i>
-    <a href="https://twitter.com/AdityaMorankar8"><i class="fab fa-twitter"></i></a></i>
+    <a href="https://twitter.com/AdityaMorankar8" target="_blank"><i class="fab fa-twitter"></i></a></i>
 
 
   </aside>
@@ -555,7 +554,18 @@
             <h5 class="card-title">Google Play Developer Licensce</h5>
             <p class="card-text"> I am eligible to develop and upload android application
               for playstore.</p>
-            <a href="https://play.google.com/store/apps/developer?id=ASMstudio&hl=en" target="_blank" class="btn btn-primary">learn more</a>
+            <a href="https://play.google.com/store/apps/developer?id=ASMstudio&hl=en" target="_blank"
+              class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Statistic with Python(Specialization)</h5>
+            <p class="card-text">This course help me to learn more about statistic, random variable, random sampling,
+              random distribution, hypothesis testing (ttest, htest, chisquare test), confidence interval and most
+              important bayesian approach .</p>
+            <a href="https://www.coursera.org/umich" target="_blank" class="btn btn-primary">learn more</a>
           </div>
         </div>
         <div class="card" style="width: 20rem;">
@@ -567,7 +577,55 @@
             <a href="https://www.udemy.com" target="_blank" class="btn btn-primary">learn more</a>
           </div>
         </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Python (Basic)</h5>
+            <p class="card-text">It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes..</p>
+            <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Front-End Web UI Frameworks and Tools: Bootstrap 4(HONORS)</h5>
+            <p class="card-text">This course help me to learn more about web designing framework, Responsive design and
+              basics of html5, CSS3 and javascript with bootstrap framework.</p>
+            <a href="https://www.coursera.org" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Applied DataScience Specialization</h5>
+            <p class="card-text">This course help me to learn more about numpy, pandas, matplotlib, seaborn, mlmodels,
+              nural network, data processing , nlp, graph theory, image classifier and esscence of deep learning and
+              many more .</p>
+            <a href="https://www.coursera.org/umich" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Neural Network and Deep Learning</h5>
+            <p class="card-text">This course help me to learn more about nural network, architecture, backpropogation,
+              forward propogation, activation function, project from scratch, linear and logistic regression using
+              perceptron.</p>
+            <a href="https://www.deeplearning.ai" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Problem Solving (Intermediate)</h5>
+            <p class="card-text">Data Structures - Use Data Structures such as HashMaps, stacks, queues, heaps. 
+              Algorithms - Create simple dynamic programming-based algorithms.</p>
+            <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
         
+
+
         <br>
 
       </div>
@@ -608,12 +666,12 @@
       <!-- Social buttons -->
       <ul class="list-unstyled list-inline text-center">
         <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/aditya.morankar.1">
+          <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/aditya.morankar.1" target="_blank">
             <i class="fab fa-facebook-f"> </i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/AdityaMorankar8">
+          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/AdityaMorankar8" target="_blank">
             <i class="fab fa-twitter"> </i>
           </a>
         </li>
@@ -623,8 +681,7 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1" href=""
-            https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in">
+          <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank">
             <i class="fab fa-linkedin-in"> </i>
           </a>
         </li>
