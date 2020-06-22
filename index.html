@@ -1,0 +1,720 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>MY PROFILE</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background-origin: padding-box;
+    }
+
+    .logo {
+      position: absolute;
+      top: 80px;
+      left: 4vw;
+      z-index: 1;
+      width: 5%;
+
+    }
+
+    .logo img {
+
+      position: absolute;
+      width: 100%;
+      border-radius: 100%;
+      opacity: 70%;
+      box-shadow: 0px 0px 8px 8px #202020;
+    }
+
+
+    #navbar-brand1 {
+      color: rgb(32, 32, 32);
+      padding-left: 10px;
+      padding-right: 10px;
+      background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(224, 224, 224));
+      border-radius: 40px;
+      font-weight: 500;
+      transition-delay: 300ms;
+    }
+
+    .navbar {
+      z-index: 100;
+    }
+
+    .asside {
+      top: 30%;
+      left: 0;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(51, 51, 51);
+      font-size: 20px;
+      color: white;
+      box-shadow: 0px 0px 4px 3px #383838;
+      z-index: 100;
+      transition-duration: 300ms;
+      /* padding: 30px 0px 30px; */
+
+
+
+    }
+
+    .asside:hover {
+      padding-left: 3vw;
+    }
+
+    .fab {
+      color: white;
+      margin: 20px 5px;
+
+
+    }
+
+    .fab:active {
+
+      color: #383838;
+    }
+
+
+
+    @media only screen and (min-width: 1000px) {
+      .asside {
+        font-size: 30px;
+
+      }
+
+    }
+
+
+    .sectionn {
+
+      background-color: black;
+      z-index: -1;
+      position: fixed;
+      top: 0px;
+
+    }
+
+    #carousel1 {
+      transition: transform 2s ease, 10% .5s ease-out
+    }
+
+    .d-block {
+      opacity: 30%;
+    }
+
+    .heading1 {
+
+      position: absolute;
+      top: 22vw;
+      left: 13vw;
+      margin: 20px;
+      padding: 20px;
+      display: inline-block;
+      text-align: justify;
+      z-index: 0;
+      color: white;
+      font-size: 4vw;
+
+    }
+
+    .heading1 p {
+
+      border-right: 2px solid white;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: anim 3.5s steps(26), blink 0.2s;
+
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+
+
+    }
+
+    @keyframes anim {
+      0% {
+        width: 0ch;
+
+      }
+
+      80% {
+        width: 26ch;
+
+      }
+
+      100% {
+        width: 26ch;
+      }
+
+    }
+
+    @keyframes blink {
+      0% {
+        border-color: transparent;
+      }
+
+      100% {
+        border-color: white;
+      }
+    }
+
+
+    .mainn {
+      /* border: 2px solid red; */
+      height: 60vw;
+    }
+
+    .mainn2 {
+      /* border: 2px solid red; */
+      background-color: white;
+      z-index: 1;
+
+    }
+
+
+    .mainn2 h1,
+    h3 {
+
+      padding: 20px;
+      text-align: center;
+    }
+
+    .education {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .card {
+      margin: 20px;
+      box-shadow: 0px 0px 5px 5px #ece8e8;
+    }
+
+    .lang {
+      z-index: 2;
+      display: flex;
+      justify-content: space-evenly;
+
+      font-size: 5vw;
+    }
+
+    .lang .fab {
+      color: #202020;
+    }
+
+    .workflow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      z-index: 1;
+
+
+    }
+
+    .mainn3 {
+      margin-top: 15vw;
+      z-index: 1;
+      height: 3000px;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+
+    }
+
+
+
+    .imagee {
+      /* background-color: rgb(0, 0, 0); */
+      position: sticky;
+      top: 0%;
+      display: block;
+      z-index: 0;
+
+    }
+
+    .imagee img {
+
+      /* opacity: 60%; */
+      image-rendering: auto;
+
+      width: 100%;
+      box-shadow: 0px 0px 6px 7px #b1b1b1;
+    }
+
+
+    .honors {
+
+      z-index: 2;
+      position: absolute;
+      top: 50px;
+      margin: 30px 0px 0px;
+      width: 100%;
+      /* border: 2px solid blue; */
+    }
+
+    .honors h1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 6vw;
+    }
+
+    @media only screen and (min-width: 900px) {
+
+      .imagee img {
+
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        /* filter: blur(10px); */
+        filter: grayscale(100%) brightness(10%);
+
+
+      }
+
+      .honors h1 {
+
+        text-align: center;
+        color: white;
+        font-size: 4vw;
+      }
+
+      .mainn3 {
+        height: 2000px;
+      }
+
+    }
+
+    .honors1 {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+
+
+
+    .achive {
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    #fo1 {
+      background-color: black;
+    }
+
+
+    @media only screen and (max-width: 800px) {
+      .mainn3 {
+        height: 1000px;
+        overflow: scroll;
+      }
+
+      #fo1 {
+        background-color: black;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="logo"><img src="{% static 'aditya.jpg' %}" alt=""></a></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a id="navbar-brand1" class="navbar-brand" href="#">ADITYA MORANKAR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            My Project
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">ASM studio</a>
+            <a class="dropdown-item" href="#">Play Online</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Other</a>
+          </div>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!-- this is aside ............... -->
+
+  <aside class="asside">
+    <a href="https://www.instagram.com/7315adi" target="_blank"><i class="fab fa-instagram"></i></a></i>
+    <a href="https://www.facebook.com/aditya.morankar.1" target="_blank"><i class="fab fa-facebook-f"></i></a></i>
+    <a href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank"><i
+        class="fab fa-linkedin-in"></i></a></i>
+    <a href="https://twitter.com/AdityaMorankar8" target="_blank"><i class="fab fa-twitter"></i></a></i>
+
+
+  </aside>
+
+
+
+
+  <!-- .................this is corousel...................... -->
+
+
+  <section class="sectionn">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="10000">
+          <img src="{% static 'bg2.jpg' %}" class="d-block w-100" alt="corosoul image">
+        </div>
+        <div class="carousel-item" data-interval="2000">
+          <img src="{% static 'bg1.jpg' %}" class="d-block w-100" alt="corosoul image">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'bg3.jpg' %}" class="d-block w-100" alt="corosoul image">
+        </div>
+      </div>
+    </div>
+    <div class="heading1">
+      <p>
+        HI I AM ADITYA MORANKAR!!!
+      </p>
+    </div>
+  </section>
+  <main class="mainn"></main>
+
+  <main class="mainn2">
+
+    <h1>Education</h1>
+    <div class="education">
+
+      <!-- Sanjuba High School -->
+      <div class="card" style="width: 20rem;">
+        <img src="{% static 'sanjuba.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sanjuba High School (X<sup>th</sup>)</h5>
+          <p class="card-text">Got 10CGPA in 10<sup>th</sup> CBSE board in year 2016.</p>
+          <a href="https://www.google.com/maps/place/Sanjuba+High+School+C.B.S.E./@21.1092417,79.1122211,14z/data=!4m8!1m2!2m1!1ssanjuba+high+school+nagpur!3m4!1s0x3bd4b8f398a1d3e9:0xd312fbc7870f7739!8m2!3d21.0987293!4d79.1477628"
+            target="_blank" class="btn btn-primary">learn more</a>
+        </div>
+      </div>
+
+      <!-- St. Paul jr College -->
+      <div class="card" style="width: 20rem;">
+        <img src="{% static 'stpaul.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">St. Paul Jr. College (XII<sup>th</sup>)</h5>
+          <p class="card-text">Got 85.6% in 12<sup>th</sup> MHSC board in year 2018.</p>
+          <a href="http://www.stpaulcollegengp.com/about.html" target="_blank" class="btn btn-primary">learn more</a>
+        </div>
+      </div>
+
+      <!-- ramdeobaba -->
+      <div class="card" style="width: 20rem;">
+        <img src="{% static 'ramdeo.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shree Ramdeobaba College of Engineering and Management (Btech.)</h5>
+          <p class="card-text">Currently persuing Engineering in Electronics and Communication </p>
+          <a href="http://www.rknec.edu/" target="_blank" class="btn btn-primary">learn more</a>
+        </div>
+      </div>
+
+    </div>
+
+    <h1>Skills & Endorsements</h1>
+    <br>
+    <br>
+    <h3>Programming Language</h3>
+    <div class="lang">
+      <i class="fab fa-cuttlefish"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-python"></i>
+      <i class="fab fa-java"></i>
+      <i class="fab fa-unity"></i>
+    </div>
+    <br>
+    <br>
+    <h3>Workflow</h3>
+    <div class="workflow">
+
+      <!-- c programming -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">C programming</h5>
+          <p class="card-text">This was my first programming language which i learned in my first year.</p>
+        </div>
+      </div>
+
+      <!-- c++ -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">C++ programming</h5>
+          <p class="card-text">C++ is my favourate programming language ,it's fast and powerful</p>
+        </div>
+      </div>
+
+      <!-- C# programming -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">C# programming</h5>
+          <p class="card-text">One of the toughest language, I use this only for game development </p>
+        </div>
+      </div>
+
+      <!-- python -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Python programming</h5>
+          <p class="card-text">Best language for machine learning and web development</p>
+        </div>
+      </div>
+
+      <!-- Cp -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Competitive Coding</h5>
+          <p class="card-text">It is the best way to boost your coding skills, I personally loved to solve challenging
+            questions and it really help me to explore ocean of programming</p>
+        </div>
+      </div>
+
+      <!-- Unity -->
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Unity</h5>
+          <p class="card-text">Unity is platform to develop high quality games</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <main class="mainn3">
+
+    <div class="imagee">
+      <img src="{% static 'quote.jpg'%}" alt="">
+    </div>
+
+    <div class="honors">
+      <h1>Licenses & Certifications</h1>
+      <br>
+      <br>
+      <div class="honors1">
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'udemy.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Multiplayer Game using Unity and Photon</h5>
+            <p class="card-text">In this course i learned about photon framework, and working multiplayer games</p>
+            <a href="https://www.udemy.com" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Introduction to html5</h5>
+            <p class="card-text">This course help me to learn more about web framework, html tags and attributes.</p>
+            <a href="https://www.coursera.org/umich" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'developer.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Google Play Developer Licensce</h5>
+            <p class="card-text"> I am eligible to develop and upload android application
+              for playstore.</p>
+            <a href="https://play.google.com/store/apps/developer?id=ASMstudio&hl=en" target="_blank"
+              class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Statistic with Python(Specialization)</h5>
+            <p class="card-text">This course help me to learn more about statistic, random variable, random sampling,
+              random distribution, hypothesis testing (ttest, htest, chisquare test), confidence interval and most
+              important bayesian approach .</p>
+            <a href="https://www.coursera.org/umich" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'udemy.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Web Development for beginners</h5>
+            <p class="card-text">This course help me to learn more about web designing framework, Responsive design and
+              basics of html5, CSS3 and javascript.</p>
+            <a href="https://www.udemy.com" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Python (Basic)</h5>
+            <p class="card-text">It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes..</p>
+            <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Front-End Web UI Frameworks and Tools: Bootstrap 4(HONORS)</h5>
+            <p class="card-text">This course help me to learn more about web designing framework, Responsive design and
+              basics of html5, CSS3 and javascript with bootstrap framework.</p>
+            <a href="https://www.coursera.org" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Applied DataScience Specialization</h5>
+            <p class="card-text">This course help me to learn more about numpy, pandas, matplotlib, seaborn, mlmodels,
+              nural network, data processing , nlp, graph theory, image classifier and esscence of deep learning and
+              many more .</p>
+            <a href="https://www.coursera.org/umich" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'coursera.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Neural Network and Deep Learning</h5>
+            <p class="card-text">This course help me to learn more about nural network, architecture, backpropogation,
+              forward propogation, activation function, project from scratch, linear and logistic regression using
+              perceptron.</p>
+            <a href="https://www.deeplearning.ai" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Problem Solving (Intermediate)</h5>
+            <p class="card-text">Data Structures - Use Data Structures such as HashMaps, stacks, queues, heaps. 
+              Algorithms - Create simple dynamic programming-based algorithms.</p>
+            <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
+          </div>
+        </div>
+        
+
+
+        <br>
+
+      </div>
+      <br>
+      <br>
+
+      <h1>Honors</h1>
+      <br>
+      <br>
+      <div class="achive">
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'autobot.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Third in Mind the Line</h5>
+            <p class="card-text">Third rank in mind the line event where particpant had to build automated bot which
+              follow black line. Held at SRCOEM Nagpur</p>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'manualbot.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">First in Robo Arena</h5>
+            <p class="card-text">Team had to build manual robot and collect all the balls in net. Held at SRCOEM Nagpur
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+  </main>
+
+  <footer id="fo1" class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/aditya.morankar.1" target="_blank">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1" href="https://twitter.com/AdityaMorankar8" target="_blank">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="/">Aditya Morankar</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://kit.fontawesome.com/8a6b92cc3d.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
