@@ -1,0 +1,204 @@
+{% load static%}
+{% static "" as baseUrl%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'stylee.css' %}">
+
+    <title>Canvas</title>
+
+</head>
+<style>
+    #MyCanvas {
+        background-color: rgb(231, 231, 231);
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        background-origin: content-box;
+
+    }
+
+    .abc {
+        position: absolute;
+        top: 20rem;
+        left: 5vw;
+    }
+
+    .abc h1 {
+        font-size: 9vw;
+        font-weight: 900;
+
+    }
+
+    .abc h2 {
+        font-size: 5vw;
+        font-weight: 750;
+    }
+
+    .abc h3 {
+        font-size: 4vw;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.747);
+    }
+
+    .coll {
+        border: 2px solid rgb(231, 231, 231);
+    }
+
+    .container {
+        background-color: rgb(231, 231, 231);
+    }
+
+
+
+    .project_title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+
+    }
+
+    .nav {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 40px;
+
+    }
+
+    .navbar {
+
+        list-style-type: none;
+        margin: 0px;
+    }
+
+    .navbar li {
+        margin: 5px 25px 5px 25px;
+        display: inline-block;
+    }
+
+    .navbar li a {
+        transition-duration: 500ms;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+
+    }
+
+    @media only screen and (min-width: 1000px) {
+
+        .navbar li a {
+
+            padding: 20px;
+            margin: 10px;
+
+        }
+    }
+
+    .navbar li a:hover {
+        text-decoration: underline;
+        font-size: 50px;
+        transition-duration: 500ms;
+        color: rgb(109, 109, 109);
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <ul class="navbar">
+            <li><a href="/"> <i class="fas fa-home"></i></a></li>
+            <li><a href="https://github.com/adi112100" target="_blank"> <i class="fab fa-github"></i> </a></li>
+            <li><a href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank">
+                    <i class="fab fa-linkedin"></i> </a></li>
+            <li><a href="https://www.kaggle.com/aditya112100" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+        </ul>
+    </div>
+    <canvas id="MyCanvas"></canvas>
+    <div class="abc">
+        <h1>HEY! I'm Aditya</h1>
+        <h2>Scroll down to view my AI/ML projects</h2>
+        <h3>Click to see Magic!!</h3>
+    </div>
+
+    <div class="container">
+
+        {% for data in data %}
+        <div class="row">
+            <div class="col-12 project_title">
+                {{data.title}}
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+
+           <div class="col-12">
+            <div class="artboard">
+                <div class="card">
+
+                    <div class="card__side card__side--back">
+                        <div class="card__cover">
+                            <h4 class="card__heading">
+                                <span class="card__heading-span" style="text-align: center;">{{data.heading}}</span>
+                            </h4>
+                        </div>
+                        <div class="card__details">
+                            <ul>
+                                <li>Description</li>
+
+                                <li>{{data.desc}}</li>
+                                <li></li>
+                                <li><a class="btn btn-dark btn1" href="{{data.link1}}" role="button" target="_blank"
+                                        style="font-size: large;">LiveProject</a></li>
+
+                                <li><a class="btn btn-dark btn1" href="{{data.link2}}" role="button" target="_blank"
+                                        style="font-size: large;">GithubRepo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card__side card__side--front">
+                        <div class="card__theme">
+                            <div class="card__theme-box">
+                                <p class="card__subject">{{data.title}}</p>
+                                <p class="card__title">{{data.heading}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+
+
+
+    <script src="{% static 'canvas.js' %}"></script>
+    <script src="https://kit.fontawesome.com/8a6b92cc3d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

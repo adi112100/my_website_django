@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from myprofile.models import Contact
 from django.contrib import messages
+from myprofile.information import lst
 # Create your views here.
 
 
@@ -18,7 +19,7 @@ def contactme(request):
         city=request.POST.get("city")
         zip=request.POST.get("zip")
         address = address1 + " " + address2
-        print(email)
+        
         contact = Contact(first_name=firstname, last_name=secondname, email=email, addr1=address, city=city, zipcode=zip)
         messages.success(request, 'Succesfully Received, Thanks For Contacting Us')
         
@@ -28,3 +29,8 @@ def contactme(request):
 
 
     return render(request, 'contact.html')
+
+def mlproject(request):
+
+    context = {'data' : lst}
+    return render(request, 'project.html', context)

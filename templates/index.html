@@ -203,7 +203,7 @@
       box-shadow: 0px 0px 5px 5px #ece8e8;
     }
 
-    
+
     .lang {
       z-index: 2;
       display: flex;
@@ -330,6 +330,87 @@
         background-color: black;
       }
 
+
+    }
+
+
+    .nav {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+      background-color: rgba(0, 0, 0, 0.692);
+      border-radius: 40px;
+
+    }
+
+    .navbarr {
+
+      list-style-type: none;
+      margin: 0px;
+    }
+
+    .navbarr li {
+
+      display: inline-block;
+    }
+
+    .navbarr li a {
+      transition-duration: 500ms;
+      text-decoration: none;
+      color: white;
+
+
+    }
+
+    @media only screen and (max-width: 1000px) {
+
+      .nav {
+        top: 52px;
+        right: 0px;
+
+
+      }
+
+      .navbarr li {
+        margin: 2px 5px 2px 5px;
+
+      }
+
+      .navbarr li a {
+
+        padding: 10px;
+        margin: 5px;
+        font-size: 10px;
+
+      }
+    }
+
+    @media only screen and (min-width: 1000px) {
+
+      .navbarr li {
+        margin: 5px 25px 5px 25px;
+      }
+
+      .navbarr li a {
+
+        padding: 20px;
+        margin: 10px;
+        font-size: 25px;
+      }
+
+      .navbarr li a:hover {
+        text-decoration: underline;
+        font-size: 35px;
+        transition-duration: 500ms;
+        color: rgb(109, 109, 109);
+      }
+    }
+
+
+
+    .navbar li {
+      margin-left: 10px;
+      margin-right: 10px;
     }
   </style>
 
@@ -337,7 +418,18 @@
 
 <body>
 
-  <div class="logo"><img src="{% static 'aditya.jpg' %}" alt=""></a></div>
+  <div class="logo">
+    <img src="{% static 'aditya.jpg' %}" alt=""></a>
+  </div>
+  <div class="nav">
+    <ul class="navbarr">
+      <li><a href="/"> <i class="fas fa-home"></i></a></li>
+      <li><a href="mlproject/"> <i class="fas fa-link"></i> ML PROJECTS</a></li>
+      <li><a href="https://www.kaggle.com/aditya112100" target="_blank"><i class="fab fa-kaggle"></i></a></li>
+    </ul>
+  </div>
+
+
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a id="navbar-brand1" class="navbar-brand" href="#">ADITYA MORANKAR</a>
@@ -360,7 +452,7 @@
             My Project
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">ASM studio</a>
+            <a class="dropdown-item" href="mlproject/">ML Projects</a>
             <a class="dropdown-item" href="#">Play Online</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Other</a>
@@ -368,10 +460,7 @@
         </li>
 
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
     </div>
   </nav>
 
@@ -585,7 +674,8 @@
           <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Python (Basic)</h5>
-            <p class="card-text">It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modularity, Objects and Types and Classes..</p>
+            <p class="card-text">It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections
+              and Iteration, Modularity, Objects and Types and Classes..</p>
             <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
           </div>
         </div>
@@ -622,12 +712,12 @@
           <img src="{% static 'hackerank.png' %}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Problem Solving (Intermediate)</h5>
-            <p class="card-text">Data Structures - Use Data Structures such as HashMaps, stacks, queues, heaps. 
+            <p class="card-text">Data Structures - Use Data Structures such as HashMaps, stacks, queues, heaps.
               Algorithms - Create simple dynamic programming-based algorithms.</p>
             <a href="https://www.hackerrank.com/aditya_morankar8" target="_blank" class="btn btn-primary">learn more</a>
           </div>
         </div>
-        
+
 
 
         <br>
@@ -685,7 +775,8 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1" href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank">
+          <a class="btn-floating btn-li mx-1"
+            href="https://www.linkedin.com/in/aditya-morankar-488b2b182/?originalSubdomain=in" target="_blank">
             <i class="fab fa-linkedin-in"> </i>
           </a>
         </li>
