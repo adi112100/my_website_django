@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from myprofile.models import Contact
 from django.contrib import messages
 from myprofile.information import lst
+from myprofile.information import gamelinks
 # Create your views here.
 
 
@@ -34,3 +35,17 @@ def mlproject(request):
 
     context = {'data' : lst}
     return render(request, 'project.html', context)
+
+def livegame(request):
+
+    context = {'data' : gamelinks}
+    return render(request, 'project1.html', context)
+
+def game1(request):
+    return render(request, 'game1.html')
+
+def game2(request):
+    return render(request, 'game2.html')
+
+def game3(request):
+    return render(request, 'game3.html')

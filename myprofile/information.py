@@ -29,4 +29,20 @@ data2 = Data('Project2',
 
 lst = [data1, data2]
 
+class Links:
 
+    def __init__(self, link, title, image):
+        super().__init__()
+        self.link = link
+        self.title = title
+        self.image = image
+
+
+lnk1 = Links('game1/', 'roll ball', 'roll.jpg')
+lnk2 = Links('https://myfirstwebgame.000webhostapp.com/alpha%20Battle/index.html', 'alpha battle' ,'keyboard.jpg')
+lnk3 = Links('https://myfirstwebgame.000webhostapp.com/sort_visualizer/index.html', 'sort_visualizer simulation' ,'sort.png')
+lnk4 = Links('game2/', 'Solar System', 'solar.jpg')
+lnk5 = Links('game3/', 'Box Shooter', 'shoot.jpg')
+
+
+gamelinks = [lnk1, lnk2, lnk3, lnk4, lnk5]

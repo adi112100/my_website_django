@@ -1,8 +1,8 @@
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext("2d");
 
-canvas.height = screen.height;
-canvas.width = screen.width;
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
 
 var max_par = Math.min(parseInt(0.4*(canvas.width) ), 450);
 console.log(max_par)
