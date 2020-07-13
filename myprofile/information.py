@@ -26,8 +26,16 @@ data2 = Data('Project2',
              
              )
 
+data3 = Data('Project3',
+             'Personalize news app',
+             'Personalize news app which provide you recommended news feed which you will find intresting and useful.',
+             'https://adityamorankar-dailynews.herokuapp.com/',
+             '/error/'
+             
+             )
 
-lst = [data1, data2]
+
+lst = [data1, data2, data3]
 
 class Links:
 

@@ -23,7 +23,8 @@ urlpatterns = [
     path( 'livegame/', views.livegame, name='livegame'),
     path( 'livegame/game1/', views.game1, name='game1'),
     path( 'livegame/game2/', views.game2, name='game2'),
-    path( 'livegame/game3/', views.game3, name='game3')
+    path( 'livegame/game3/', views.game3, name='game3'),
+    path('error/', views.error, name='error')
 
 
 
