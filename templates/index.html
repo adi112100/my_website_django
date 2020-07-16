@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css">
+
 
   <title>MY PROFILE</title>
 
@@ -419,7 +421,7 @@
 
 <body>
 
-  <div class="logo">
+  <div class="logo wow zoomIn">
     <img src="{% static 'aditya.jpg' %}" alt=""></a>
   </div>
   <div class="nav">
@@ -512,7 +514,7 @@
     <div class="education">
 
       <!-- Sanjuba High School -->
-      <div class="card" style="width: 20rem;">
+      <div class="card animated wow fadeInLeft" data-wow-duration="1.5s" style="width: 20rem;">
         <img src="{% static 'sanjuba.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Sanjuba High School (X<sup>th</sup>)</h5>
@@ -523,7 +525,7 @@
       </div>
 
       <!-- St. Paul jr College -->
-      <div class="card" style="width: 20rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 20rem;">
         <img src="{% static 'stpaul.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">St. Paul Jr. College (XII<sup>th</sup>)</h5>
@@ -533,7 +535,7 @@
       </div>
 
       <!-- ramdeobaba -->
-      <div class="card" style="width: 20rem;">
+      <div class="card animated wow fadeInRight" data-wow-duration="1.5s" style="width: 20rem;">
         <img src="{% static 'ramdeo.png' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Shree Ramdeobaba College of Engineering and Management (Btech.)</h5>
@@ -549,20 +551,20 @@
     <br>
     <h3>Programming Language</h3>
     <div class="lang">
-      <i class="fab fa-cuttlefish"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-python"></i>
-      <i class="fab fa-java"></i>
-      <i class="fab fa-unity"></i>
+      <i class="fab fa-cuttlefish animated wow flipInX" data-wow-duration="2s"></i>
+      <i class="fab fa-css3-alt animated wow flipInX" data-wow-duration="2s"></i>
+      <i class="fab fa-html5 animated wow flipInX" data-wow-duration="2s"></i>
+      <i class="fab fa-python animated wow flipInX" data-wow-duration="2s"></i>
+      <i class="fab fa-java animated wow flipInX" data-wow-duration="2s"></i>
+      <i class="fab fa-unity animated wow flipInX" data-wow-duration="2s"></i>
     </div>
     <br>
     <br>
     <h3>Workflow</h3>
-    <div class="workflow">
+    <div class="workflow ">
 
       <!-- c programming -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">C programming</h5>
           <p class="card-text">This was my first programming language which i learned in my first year.</p>
@@ -570,7 +572,7 @@
       </div>
 
       <!-- c++ -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">C++ programming</h5>
           <p class="card-text">C++ is my favourate programming language ,it's fast and powerful</p>
@@ -578,7 +580,7 @@
       </div>
 
       <!-- C# programming -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">C# programming</h5>
           <p class="card-text">One of the toughest language, I use this only for game development </p>
@@ -586,7 +588,7 @@
       </div>
 
       <!-- python -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Python programming</h5>
           <p class="card-text">Best language for machine learning and web development</p>
@@ -594,7 +596,7 @@
       </div>
 
       <!-- Cp -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Competitive Coding</h5>
           <p class="card-text">It is the best way to boost your coding skills, I personally loved to solve challenging
@@ -603,7 +605,7 @@
       </div>
 
       <!-- Unity -->
-      <div class="card" style="width: 18rem;">
+      <div class="card animated wow fadeInUp" data-wow-duration="1.5s" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Unity</h5>
           <p class="card-text">Unity is platform to develop high quality games</p>
@@ -621,8 +623,8 @@
       <img src="{% static 'quote.jpg'%}" alt="">
     </div>
 
-    <div class="honors">
-      <h1>Licenses & Certifications</h1>
+    <div class="honors animated wow fadeIn" data-wow-duration="3s">
+      <h1 >Licenses & Certifications</h1>
       <br>
       <br>
       <div class="honors1">
@@ -798,6 +800,8 @@
   <!-- Footer -->
 
 
+
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://kit.fontawesome.com/8a6b92cc3d.js" crossorigin="anonymous"></script>
@@ -811,6 +815,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>
+    $(function () {
+      new WOW().init();
+    });
+  </script>
 
 </body>
 
