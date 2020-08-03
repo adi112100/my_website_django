@@ -34,8 +34,16 @@ data3 = Data('Project3',
              
              )
 
+data4 = Data('Project4',
+             'Smart Attendance app',
+             'Attendance app based on facial recognition using deep learning and django as a backend',
+             'https://adityamorankar-smartattendance.herokuapp.com/',
+             'https://github.com/adi112100/smart-attendance-app'
+             
+             )
 
-lst = [data1, data2, data3]
+
+lst = [data1, data2, data3, data4]
 
 class Links:
 
