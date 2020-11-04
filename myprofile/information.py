@@ -42,8 +42,15 @@ data4 = Data('Project4',
              
              )
 
+data5 = Data('Project5',
+             'Path Finding Visualizer',
+             'It finds the path from point A to point B. you can choose diffrent algorithms (both weighted and unweighted) and can create barriers(walls)',
+             'https://pathfinderbyaditya.netlify.app/',
+             'https://github.com/adi112100/PathFindier_backend',
+             )
 
-lst = [data1, data2, data3, data4]
+
+lst = [data1, data2, data3, data4, data5]
 
 class Links:
 
