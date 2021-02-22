@@ -49,8 +49,22 @@ data5 = Data('Project5',
              'https://github.com/adi112100/PathFindier_backend',
              )
 
+data6 = Data('Project6',
+             'Learnzilla',
+             'Learnzilla is complete elearning platform aiming at primary and secondary schools. It includes all the features which is require for online learning system',
+             'https://mainpageempower.netlify.app/',
+             '/error/',
+             )
 
-lst = [data1, data2, data3, data4, data5]
+data7 = Data('Project7',
+             'Burhanpur Website',
+             'This was my first freelancing project, where I develop website for burhanpur jalebi and sweet center. I also added online order system with virtual menu.',
+             'https://burhanpurjalebi.netlify.app/',
+             '/error/',
+             )
+
+
+lst = [data1, data2, data3, data4, data5, data6, data7]
 
 class Links:
 

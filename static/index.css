@@ -1,0 +1,108 @@
+
+body {
+background-color: #000000;
+padding: 0;
+margin: 0;
+overflow: hidden;
+}
+
+* {
+margin: 0;
+padding: 0;
+background-origin: content-box;
+
+}
+
+.abc {
+position: absolute;
+top: 20rem;
+left: 5vw;
+color: white;
+pointer-events: none;
+}
+
+.abc h1 {
+font-size: 9vw;
+font-weight: 900;
+
+}
+
+.abc h2 {
+font-size: 5vw;
+font-weight: 750;
+}
+
+.abc h3 {
+font-size: 4vw;
+font-weight: 700;
+color: rgba(219, 219, 219, 0.747);
+}
+
+.coll {
+border: 2px solid rgb(231, 231, 231);
+}
+
+.container {
+background-color: rgb(231, 231, 231);
+}
+
+
+
+.project_title {
+text-align: center;
+font-size: 40px;
+font-weight: 700;
+
+}
+
+.nav {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: rgb(255, 255, 255);
+border-radius: 40px;
+
+}
+
+.navbar {
+
+list-style-type: none;
+margin: 0px;
+}
+
+.navbar li {
+margin: 5px 25px 5px 25px;
+display: inline-block;
+}
+
+.navbar li a {
+transition-duration: 500ms;
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-weight: 800;
+font-size: 25px;
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+.navbar li a {
+
+padding: 20px;
+margin: 10px;
+
+}
+}
+
+.navbar li a:hover {
+text-decoration: underline;
+font-size: 50px;
+transition-duration: 500ms;
+color: rgb(109, 109, 109);
+}
+
+.modelbtn {
+position: absolute;
+bottom: 10px;
+right: 10px;
+}

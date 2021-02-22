@@ -51,4 +51,4 @@ def game3(request):
     return render(request, 'game3.html')
 
 def error(request):
-    return HttpResponse("<h1>Sorry, Github Repo is private</h1>")
+    return HttpResponse("<h1>Sorry, Github Repo is private and currently in Production Server. Sorry for inconvinence.</h1>")
